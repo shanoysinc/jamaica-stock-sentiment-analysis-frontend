@@ -60,94 +60,102 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Box px={[3, 10]}>
-          <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-            <Flex alignItems={"center"}>
-              <NextLink href="/">
-                <Text fontWeight={"bold"} color="#05af6e" fontSize="x-large">
-                  SentiMetrics
-                </Text>
-              </NextLink>
-            </Flex>
-            <IconButton
-              size={"md"}
-              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-              aria-label={"Open Menu"}
-              display={{ md: "none" }}
-              onClick={isOpen ? onClose : onOpen}
-            />
-            <HStack gap={2}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
-            </HStack>
-            <Button
-              bg={"#05AF6E"}
-              _hover={{
-                backgroundColor: "green.500",
-              }}
-              onClick={() => router.push("/dashboard")}
-              color={"white"}
-            >
-              View Dashboard
-            </Button>
-          </Flex>
-
-          {isOpen ? (
-            <Box pb={4} display={{ md: "none" }}>
-              <Stack as={"nav"} spacing={4}>
+        <Box
+          h={1000}
+          sx={{
+            background: `linear-gradient(175deg, #dfeeeb 75%, white 25%)`,
+          }}
+        >
+          <Box px={[3, 10]}>
+            <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+              <Flex alignItems={"center"}>
+                <NextLink href="/">
+                  <Text fontWeight={"bold"} color="#05af6e" fontSize="x-large">
+                    SentiMetrics
+                  </Text>
+                </NextLink>
+              </Flex>
+              <IconButton
+                size={"md"}
+                icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+                aria-label={"Open Menu"}
+                display={{ md: "none" }}
+                onClick={isOpen ? onClose : onOpen}
+              />
+              <HStack gap={2}>
                 {Links.map((link) => (
                   <NavLink key={link}>{link}</NavLink>
                 ))}
-              </Stack>
-            </Box>
-          ) : null}
-        </Box>
-        <Box>
-          <Stack
-            as={Box}
-            textAlign={"center"}
-            spacing={{ base: 8, md: 14 }}
-            py={{ base: 20, md: 36 }}
-          >
-            <Heading
-              fontWeight={700}
-              fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
-              lineHeight={"110%"}
-            >
-              Make money from <br />
-              <Text as={"span"} color={"green.400"}>
-                your audience
-              </Text>
-            </Heading>
-            <Text>
-              Monetize your content by charging your most loyal readers and
-              reward them loyalty points.
-            </Text>
-            <Stack
-              direction={"column"}
-              spacing={3}
-              align={"center"}
-              alignSelf={"center"}
-              position={"relative"}
-            >
+              </HStack>
               <Button
-                colorScheme={"green"}
-                bg={"green.400"}
-                px={10}
-                py={6}
+                bg={"#05AF6E"}
                 _hover={{
-                  bg: "green.500",
+                  backgroundColor: "green.500",
                 }}
+                onClick={() => router.push("/dashboard")}
+                color={"white"}
               >
                 View Dashboard
               </Button>
-              <Button variant={"link"} colorScheme={"blue"} size={"sm"}>
-                Learn more
-              </Button>
+            </Flex>
+
+            {isOpen ? (
+              <Box pb={4} display={{ md: "none" }}>
+                <Stack as={"nav"} spacing={4}>
+                  {Links.map((link) => (
+                    <NavLink key={link}>{link}</NavLink>
+                  ))}
+                </Stack>
+              </Box>
+            ) : null}
+          </Box>
+          <Box>
+            <Stack
+              as={Box}
+              textAlign={"center"}
+              spacing={{ base: 8, md: 14 }}
+              py={{ base: 20, md: 36 }}
+            >
+              <Heading
+                fontWeight={700}
+                fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
+                lineHeight={"110%"}
+              >
+                Never miss what people find in <br />
+                in the media about <br />
+                <Text as={"span"} color={"green.400"}>
+                  your brand.
+                </Text>
+              </Heading>
+              <Text px={[50, 300]}>
+                A comprehensive tool for monitoring and analyzing the media
+                coverage of Jamaican companies, allowing users to make informed
+                decisions based on the sentiment of media coverage.
+              </Text>
+              <Stack
+                direction={"column"}
+                spacing={3}
+                align={"center"}
+                alignSelf={"center"}
+                position={"relative"}
+              >
+                <Button
+                  colorScheme={"green"}
+                  bg={"green.400"}
+                  px={10}
+                  py={6}
+                  _hover={{
+                    bg: "green.500",
+                  }}
+                  onClick={() => router.push("/dashboard")}
+                >
+                  View Dashboard
+                </Button>
+              </Stack>
             </Stack>
-          </Stack>
+          </Box>
         </Box>
+
         <FeatureSection />
         <Footer />
       </main>
