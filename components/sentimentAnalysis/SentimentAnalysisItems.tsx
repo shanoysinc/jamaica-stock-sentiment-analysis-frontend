@@ -14,8 +14,6 @@ export const SentimentAnalysisItems = () => {
     }
   );
 
-  console.log(companyAnalysis);
-
   return (
     <Box px={[3, 10]} py={14}>
       <Heading color={"gray.700"} size={"md"} pb={8}>
