@@ -8,6 +8,7 @@ import {
   useColorModeValue,
   VisuallyHidden,
   HStack,
+  Image
 } from "@chakra-ui/react";
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { ReactNode } from "react";
@@ -48,6 +49,7 @@ export default function Footer() {
   return (
     <Box px={20} pt={20}>
       <Stack py={4} spacing={4} justify={"center"} align={"center"}>
+        <Image alt="sentimetrics logo" src={`./logop.png`} w={`100px`} />
         <HStack gap={6}>
           <Link href={"#"}>Home</Link>
           <Link href={"/about"}>About</Link>

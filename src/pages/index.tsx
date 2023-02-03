@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import { ReactNode } from "react";
@@ -21,6 +20,7 @@ import {
   Stack,
   Text,
   Heading,
+  Image,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
@@ -28,6 +28,8 @@ import { useRouter } from "next/router";
 
 import Footer from "components/Footer";
 import FeatureSection from "components/FeatureSection";
+import Typewriter from 'typewriter-effect';
+
 const inter = Inter({ subsets: ["latin"] });
 
 const Links = ["about", "team", "contact"];
@@ -61,10 +63,11 @@ export default function Home() {
       </Head>
       <main>
         <Box
-          h={1000}
+          h={1200}
           sx={{
             background: `linear-gradient(175deg, #dfeeeb 75%, white 25%)`,
           }}
+          position="relative"
         >
           <Box px={[3, 10]}>
             <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
@@ -124,7 +127,13 @@ export default function Home() {
                 Never miss what people find in <br />
                 in the media about <br />
                 <Text as={"span"} color={"green.400"}>
-                  your brand.
+                  <Typewriter
+                    options={{
+                      strings: ["your company.", "your service.", "your brand."],
+                      autoStart: true,
+                      loop: true,
+                    }}
+                  />
                 </Text>
               </Heading>
               <Text px={[50, 300]}>
@@ -154,6 +163,16 @@ export default function Home() {
               </Stack>
             </Stack>
           </Box>
+          <Image
+            alt="sentimetrics logo"
+            src={`./dashboard.png`}
+            w={`900px`}
+            position="absolute"
+            bottom={"10px"}
+            left="20%"
+            boxShadow="sm"
+            rounded={4}
+          />
         </Box>
 
         <FeatureSection />
