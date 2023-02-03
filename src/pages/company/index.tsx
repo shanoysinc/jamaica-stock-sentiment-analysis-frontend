@@ -48,7 +48,7 @@ export default function Index() {
                   />
                   <Block truncate={true}>
                     <Text>Total Data Analyze</Text>
-                    <Metric truncate={true}>{"10, 346"}</Metric>
+                    <Metric truncate={true}>{"10,346"}</Metric>
                   </Block>
                 </Flex>
               </Card>
