@@ -131,17 +131,19 @@ export default function Home() {
               alignSelf={"center"}
               position={"relative"}
             >
-              <Button
-                colorScheme={"green"}
-                bg={"green.400"}
-                px={10}
-                py={6}
-                _hover={{
-                  bg: "green.500",
-                }}
-              >
-                View Dashboard
-              </Button>
+              <Link href="/dashboard">
+                <Button
+                  colorScheme={"green"}
+                  bg={"green.400"}
+                  px={10}
+                  py={6}
+                  _hover={{
+                    bg: "green.500",
+                  }}
+                >
+                  View Dashboard
+                </Button>
+              </Link>
               <Button variant={"link"} colorScheme={"blue"} size={"sm"}>
                 Learn more
               </Button>
