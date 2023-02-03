@@ -23,10 +23,11 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
+import { useRouter } from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const Links = ["dashboard", "about"];
+const Links = ["about"];
 
 const NavLink = ({ children }: { children: any }) => (
   <Link
@@ -46,6 +47,7 @@ const NavLink = ({ children }: { children: any }) => (
 
 export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -77,7 +79,17 @@ export default function Home() {
                   <NavLink key={link}>{link}</NavLink>
                 ))}
               </Box>
-              <Button>Visit Dashboard</Button>
+              <Button
+                bg={"#05AF6E"}
+                _hover={{
+                  backgroundColor: "#dfedeb",
+                  color: "#000",
+                }}
+                onClick={() => router.push("/dashboard")}
+                color={"white"}
+              >
+                Visit Dashboard
+              </Button>
             </Flex>
 
             {isOpen ? (
