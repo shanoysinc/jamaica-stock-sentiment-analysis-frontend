@@ -22,9 +22,10 @@ export const SentimentAnalysisItems = () => {
       </Heading>
 
       <Flex flexWrap={"wrap"} gap={4}>
-        {companyAnalysis.map((data: any, index: number) => (
-          <SentimentAnalysisCard key={`${data.name}-${index}`} data={data} />
-        ))}
+        {companyAnalysis &&
+          companyAnalysis.map((data: any, index: number) => (
+            <SentimentAnalysisCard key={`${data.name}-${index}`} data={data} />
+          ))}
       </Flex>
     </Box>
   );
