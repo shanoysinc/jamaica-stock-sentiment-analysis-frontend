@@ -18,7 +18,12 @@ export const SentimentAnalysisCard = () => {
         boxShadow="sm"
         cursor={"pointer"}
       >
-        <Text color={"#64748b"} fontSize={"sm"} fontWeight={500} textTransform={`capitalize`}>
+        <Text
+          color={"#64748b"}
+          fontSize={"sm"}
+          fontWeight={500}
+          textTransform={`capitalize`}
+        >
           {`Sagicor`.toUpperCase()}
         </Text>
         <Text color={"black"} fontSize={"larger"} fontWeight="bold">
