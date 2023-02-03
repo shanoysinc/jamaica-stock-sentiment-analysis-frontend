@@ -8,10 +8,12 @@ import {
   useColorModeValue,
   VisuallyHidden,
   HStack,
-  Image
+  Image,
+  Divider
 } from "@chakra-ui/react";
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { ReactNode } from "react";
+import { SiShanghaimetro } from "react-icons/si";
 
 const SocialButton = ({
   children,
@@ -49,14 +51,19 @@ export default function Footer() {
   return (
     <Box px={20} pt={20}>
       <Stack py={4} spacing={4} justify={"center"} align={"center"}>
-        <Image alt="sentimetrics logo" src={`./logop.png`} w={`100px`} />
+        <HStack>
+          <SiShanghaimetro fontSize={"28px"} color="#09AE6D" />
+          <Text fontWeight={"bold"} color="#05af6e" fontSize="x-large">
+            sentimetrics
+          </Text>
+        </HStack>
         <HStack gap={6}>
           <Link href={"#"}>Home</Link>
           <Link href={"/about"}>About</Link>
           <Link href={"/contact"}>Contact</Link>
         </HStack>
       </Stack>
-
+      <Divider />
       <Box>
         <Stack
           py={4}

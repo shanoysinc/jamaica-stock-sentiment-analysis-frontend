@@ -25,10 +25,11 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
+import { SiShanghaimetro } from "react-icons/si";
 
 import Footer from "components/Footer";
 import FeatureSection from "components/FeatureSection";
-import Typewriter from 'typewriter-effect';
+import Typewriter from "typewriter-effect";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -73,9 +74,16 @@ export default function Home() {
             <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
               <Flex alignItems={"center"}>
                 <NextLink href="/">
-                  <Text fontWeight={"bold"} color="#05af6e" fontSize="x-large">
-                    SentiMetrics
-                  </Text>
+                  <HStack>
+                    <SiShanghaimetro fontSize={"28px"} color="#09AE6D" />
+                    <Text
+                      fontWeight={"bold"}
+                      color="#05af6e"
+                      fontSize="x-large"
+                    >
+                      sentimetrics
+                    </Text>
+                  </HStack>
                 </NextLink>
               </Flex>
               <IconButton
@@ -129,7 +137,11 @@ export default function Home() {
                 <Text as={"span"} color={"green.400"}>
                   <Typewriter
                     options={{
-                      strings: ["your company.", "your service.", "your brand."],
+                      strings: [
+                        "your company.",
+                        "your service.",
+                        "your brand.",
+                      ],
                       autoStart: true,
                       loop: true,
                     }}

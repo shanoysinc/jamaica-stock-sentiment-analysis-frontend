@@ -19,6 +19,8 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
+import { SiShanghaimetro } from "react-icons/si";
+
 const Links = ["dashboard", "about"];
 
 const NavLink = ({ children }: { children: any }) => (
@@ -42,16 +44,16 @@ export default function Index() {
 
   return (
     <>
-      <Box
-        bgColor="white"
-        px={[3, 10]}
-      >
+      <Box bgColor="white" px={[3, 10]}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Flex alignItems={"center"}>
             <NextLink href="/">
-              <Text fontWeight={"bold"} color="#05af6e" fontSize="x-large">
-                SentiMetrics
-              </Text>
+              <HStack>
+                <SiShanghaimetro fontSize={"28px"} color="#09AE6D" />
+                <Text fontWeight={"bold"} color="#05af6e" fontSize="x-large">
+                  sentimetrics
+                </Text>
+              </HStack>
             </NextLink>
           </Flex>
           <IconButton

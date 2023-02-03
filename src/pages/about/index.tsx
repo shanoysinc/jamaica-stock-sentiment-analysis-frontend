@@ -8,7 +8,7 @@ const index = () => {
       <Navbar />
       <Box bgColor={"#f3f4f6"} px={50} py={12}>
         <Heading size={"lg"} color="#1f2937">
-          Why was SentiMetrics Created?{" "}
+          Why was sentimetrics created?{" "}
         </Heading>
         <Text pt={6} lineHeight={1.8} color="#4b5563" w={1000}>
           In today&apos;s digital age, companies must be aware of what people
