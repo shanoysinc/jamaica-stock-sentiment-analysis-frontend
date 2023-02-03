@@ -15,37 +15,53 @@ export const SentimentAnalysisCard = () => {
         borderRadius={12}
         p={4}
         gap={12}
-        boxShadow="sm"
+        // boxShadow="sm"
         cursor={"pointer"}
       >
-        <Text color={"#64748b"} fontSize={"lg"}>
+        <Text color={"#64748b"} fontSize={"lg"} textTransform={`capitalize`} >
           Sagicor
         </Text>
         <Text color={"black"} fontSize={"larger"} fontWeight="bold">
           Overwhelmingly Positive
         </Text>
 
-        <Box display={"flex"} gap={6} py={6}>
+        <Box display={"flex"} gap={1} py={6}>
           <Progress
+            height={"14px"}
             width={"20%"}
             borderRadius={6}
-            colorScheme="red"
+            sx={{
+              "& > div": {
+                background: "#e6484d",
+              },
+            }}
             size="lg"
-            value={20}
+            value={100}
           />
           <Progress
+            height={"14px"}
             width={"40%"}
             borderRadius={6}
-            colorScheme="yellow"
+            sx={{
+              "& > div": {
+                background: "#ff9f1b",
+              },
+            }}
             size="lg"
-            value={40}
+            value={100}
           />
           <Progress
+            height={"14px"}
             width={"40%"}
             borderRadius={6}
             colorScheme="whatsapp"
             size="lg"
-            value={40}
+            value={100}
+            sx={{
+              "& > div": {
+                background: "#46a759",
+              },
+            }}
           />
         </Box>
 
@@ -72,7 +88,7 @@ export const SentimentAnalysisCard = () => {
               Neutral
             </Text>
             <Flex mt={2} alignItems="center" gap={2}>
-              <MdOutlineSentimentNeutral color="#fb923c" size={24} />
+              <MdOutlineSentimentNeutral color="#ff9f1b" size={24} />
               <Text fontWeight={"bold"}>123</Text>
             </Flex>
           </Flex>
@@ -85,7 +101,7 @@ export const SentimentAnalysisCard = () => {
               Positive
             </Text>
             <Flex mt={2} alignItems="center" gap={2}>
-              <ImSad color="#22c55e" size={20} />
+              <ImSad color="#46a759" size={20} />
               <Text fontWeight={"bold"}>104</Text>
             </Flex>
           </Flex>

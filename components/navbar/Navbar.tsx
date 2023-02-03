@@ -51,7 +51,7 @@ export default function Index() {
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Flex alignItems={"center"}>
             <NextLink href="/dashboard">
-              <Text fontWeight={"bold"} color="#2563eb" fontSize="x-large">
+              <Text fontWeight={"bold"} color="#05af6e" fontSize="x-large">
                 SentiMetrics
               </Text>
             </NextLink>
