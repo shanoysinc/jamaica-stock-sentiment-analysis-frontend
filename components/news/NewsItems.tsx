@@ -8,7 +8,7 @@ export const NewsItems = () => {
         <Text fontWeight={"bold"} fontSize={"md"}>
           Suspendisse eu vulputate est, ac sodales nunc.
         </Text>
-        <Text pt={1} pb={3} fontSize={"sm"}>
+        <Text pt={1} pb={3} fontSize={"sm"} color="#4b5563">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           eu vulputate est, ac sodales nunc.....
         </Text>
@@ -23,7 +23,7 @@ export const NewsItems = () => {
         <Text fontWeight={"bold"} fontSize={"md"}>
           Suspendisse eu vulputate est, ac sodales nunc.
         </Text>
-        <Text pt={1} pb={3} fontSize={"sm"}>
+        <Text pt={1} pb={3} fontSize={"sm"} color="#4b5563">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           eu vulputate est, ac sodales nunc.....
         </Text>
@@ -38,7 +38,7 @@ export const NewsItems = () => {
         <Text fontWeight={"bold"} fontSize={"md"}>
           Suspendisse eu vulputate est, ac sodales nunc.
         </Text>
-        <Text pt={1} pb={3} fontSize={"sm"}>
+        <Text pt={1} pb={3} fontSize={"sm"} color="#4b5563">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           eu vulputate est, ac sodales nunc.....
         </Text>
