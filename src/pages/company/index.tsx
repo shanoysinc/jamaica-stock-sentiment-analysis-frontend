@@ -9,9 +9,9 @@ export default function Index() {
   return (
     <Box bgColor={"#f3f4f6"} height={"100vh"}>
       <Navbar />
-      <Box bgColor={"#f3f4f6"} px={50} py={12}>
-        <SimpleGrid columns={3} spacing={14}>
-          <Box gridColumnStart={1} gridColumnEnd={3}>
+      <Box bgColor={"#f3f4f6"} px={[3, 10]} py={12}>
+        <SimpleGrid columns={[1, 1, 1, 3]} spacing={14}>
+          <Box gridColumnStart={1} gridColumnEnd={[1, 1, 1, 3]}>
             <Text fontWeight={"bold"} fontSize={"x-large"} pb={4}>
               Sagicor Financial Company
             </Text>

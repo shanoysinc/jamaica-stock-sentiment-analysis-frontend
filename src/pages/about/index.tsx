@@ -7,8 +7,10 @@ const index = () => {
     <Box bgColor={"#f3f4f6"} height={"100vh"}>
       <Navbar />
       <Box bgColor={"#f3f4f6"} px={50} py={12}>
-        <Heading size={"lg"}>Why was SentiMetrics Created? </Heading>
-        <Text pt={6} lineHeight={1.8}>
+        <Heading size={"lg"} color="#1f2937">
+          Why was SentiMetrics Created?{" "}
+        </Heading>
+        <Text pt={6} lineHeight={1.8} color="#4b5563">
           In today&apos;s digital age, companies must be aware of what people
           are saying about them online. With the explosion of social media,
           forums, and review sites, there is a wealth of information available
@@ -17,7 +19,7 @@ const index = () => {
           brand and make data-driven decisions to improve their reputation and
           customer experience.
         </Text>
-        <Text pt={3} lineHeight={1.8}>
+        <Text pt={3} lineHeight={1.8} color="#4b5563">
           The purpose of our website is to provide companies with an in-depth
           analysis of how people are talking about them online. We use advanced
           algorithms and machine learning techniques to gather and process large
@@ -26,7 +28,7 @@ const index = () => {
           analyzed to produce sentiment scores that provide a snapshot of public
           opinion about the company.
         </Text>
-        <Text pt={3} lineHeight={1.8}>
+        <Text pt={3} lineHeight={1.8} color="#4b5563">
           Our methodology is built on the latest research and cutting-edge
           technology, ensuring that our results are accurate and trustworthy. We
           take great care to ensure that our algorithms are unbiased and that
