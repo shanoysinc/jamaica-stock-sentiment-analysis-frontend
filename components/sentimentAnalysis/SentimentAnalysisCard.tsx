@@ -1,10 +1,25 @@
 import { Box, Text, Heading, Flex, Progress } from "@chakra-ui/react";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useMemo } from "react";
 import { BiSmile, BiMeh } from "react-icons/bi";
 import { HiOutlineEmojiSad } from "react-icons/hi";
 import { MdOutlineSentimentNeutral } from "react-icons/md";
-export const SentimentAnalysisCard = () => {
+export const SentimentAnalysisCard = ({ data }: { data: any }) => {
+  const analysis = useMemo(() => {
+    const results = { positive: 0, negative: 0, neutral: 0 };
+
+    data.companyAnalysis.map((data: any) => {
+      if (data.rating === "negative") {
+        results.negative += 1;
+      } else if (data.rating === "Positive") {
+        results.positive += 1;
+      } else if (data.rating === "neutral") {
+        results.neutral += 1;
+      }
+    });
+
+    return results;
+  }, [data]);
   return (
     <Link href={"/company"}>
       <Box
@@ -24,10 +39,10 @@ export const SentimentAnalysisCard = () => {
           fontWeight={500}
           textTransform={`capitalize`}
         >
-          {`Sagicor`.toUpperCase()}
+          {data ? data.name.toUpperCase() : ""}
         </Text>
         <Text color={"black"} fontSize={"larger"} fontWeight="bold">
-          Overwhelmingly Positive
+          Overwhelmingly {data ? data.overalRating : ""}
         </Text>
 
         <Box display={"flex"} gap={1} py={6}>
@@ -81,7 +96,7 @@ export const SentimentAnalysisCard = () => {
             </Text>
             <Flex mt={1} alignItems="center" gap={2}>
               <HiOutlineEmojiSad color="#ef4444" size={24} />
-              <Text fontWeight={"bold"}>123</Text>
+              <Text fontWeight={"bold"}>{analysis.negative}</Text>
             </Flex>
           </Flex>
           <Flex
@@ -94,7 +109,7 @@ export const SentimentAnalysisCard = () => {
             </Text>
             <Flex mt={1} alignItems="center" gap={2}>
               <BiMeh color="#ff9f1b" size={24} />
-              <Text fontWeight={"bold"}>123</Text>
+              <Text fontWeight={"bold"}>{analysis.neutral}</Text>
             </Flex>
           </Flex>
           <Flex
@@ -107,7 +122,7 @@ export const SentimentAnalysisCard = () => {
             </Text>
             <Flex mt={1} alignItems="center" gap={2}>
               <BiSmile color="#46a759" size={24} />
-              <Text fontWeight={"bold"}>104</Text>
+              <Text fontWeight={"bold"}>{analysis.positive}</Text>
             </Flex>
           </Flex>
         </Flex>
