@@ -5,9 +5,9 @@ import Navbar from "../../../components/navbar/Navbar";
 
 const index = () => {
   return (
-    <Box bgColor={"#f3f4f6"} height={"100vh"}>
+    <Box height={"100vh"}>
       <Navbar />
-      <Box bgColor={"#f3f4f6"}>
+      <Box>
         <SentimentAnalysisItems />
       </Box>
     </Box>

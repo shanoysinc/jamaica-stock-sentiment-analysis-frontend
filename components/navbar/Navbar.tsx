@@ -43,14 +43,12 @@ export default function Index() {
   return (
     <>
       <Box
-        borderBottomColor={"gray.200"}
         bgColor="white"
-        borderBottomWidth={1}
         px={[3, 10]}
       >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Flex alignItems={"center"}>
-            <NextLink href="/dashboard">
+            <NextLink href="/">
               <Text fontWeight={"bold"} color="#05af6e" fontSize="x-large">
                 SentiMetrics
               </Text>
