@@ -7,7 +7,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
-    const { data } = await axios.get(`/api/company`);
+    const { data } = await axios.get(`/findAll`);
     res.status(200).json(data);
   } catch (err: any) {
     res.status(err.response.data.error.status).json(err.response.data.error);
