@@ -4,7 +4,13 @@ import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import { SentimentAnalysisItems } from "components/sentimentAnalysis/SentimentAnalysisItems";
 import Navbar from "../../../components/navbar/Navbar";
 import { NewsItems } from "components/news/NewsItems";
-import { Card } from "@tremor/react";
+import { Block, Card, Icon, Metric } from "@tremor/react";
+
+import {
+  OfficeBuildingIcon,
+  ScaleIcon,
+  DatabaseIcon,
+} from "@heroicons/react/solid";
 
 export default function Index() {
   return (
@@ -17,53 +23,50 @@ export default function Index() {
               Sagicor Financial Company
             </Text>
 
-            <Flex gap={10} pb={10}>
-              <Card
-                maxWidth="max-w-none"
-                hFull={false}
-                shadow={true}
-                decoration="top"
-                decorationColor="indigo"
-                marginTop="mt-0"
-              >
-                <Text textTransform={"uppercase"} color="gray.600">
-                  Company Position
-                </Text>
-                <Text pt={2} fontSize="lg" fontWeight={"bold"}>
-                  1
-                </Text>
+            <SimpleGrid columns={[1, 2, 3]} gap={10} pb={10}>
+              <Card decoration="top" decorationColor={"indigo"}>
+                <Flex justifyContent="justify-start" gap="4">
+                  <Icon
+                    icon={OfficeBuildingIcon}
+                    variant="light"
+                    size="xl"
+                    color={"indigo"}
+                  />
+                  <Block truncate={true}>
+                    <Text>Company Position</Text>
+                    <Metric truncate={true}>{1}</Metric>
+                  </Block>
+                </Flex>
               </Card>
-              <Card
-                maxWidth="max-w-none"
-                hFull={false}
-                shadow={true}
-                marginTop="mt-0"
-                decoration="top"
-                decorationColor="indigo"
-              >
-                <Text textTransform={"uppercase"} color="gray.600">
-                  Total Data Analyze
-                </Text>
-                <Text pt={2} fontSize="lg" fontWeight={"bold"}>
-                  10,334
-                </Text>
+              <Card decoration="top" decorationColor={"fuchsia"}>
+                <Flex justifyContent="justify-start" gap="4">
+                  <Icon
+                    icon={DatabaseIcon}
+                    variant="light"
+                    size="xl"
+                    color={"fuchsia"}
+                  />
+                  <Block truncate={true}>
+                    <Text>Total Data Analyze</Text>
+                    <Metric truncate={true}>{"10,346"}</Metric>
+                  </Block>
+                </Flex>
               </Card>
-              <Card
-                maxWidth="max-w-none"
-                hFull={false}
-                shadow={true}
-                decoration="top"
-                decorationColor="green"
-                marginTop="mt-0"
-              >
-                <Text textTransform={"uppercase"} color="gray.600">
-                  Total Sentiment
-                </Text>
-                <Text pt={2} fontSize="lg" fontWeight={"bold"}>
-                  Positive
-                </Text>
+              <Card decoration="top" decorationColor={"green"}>
+                <Flex justifyContent="justify-start" gap="4">
+                  <Icon
+                    icon={ScaleIcon}
+                    variant="light"
+                    size="xl"
+                    color={"green"}
+                  />
+                  <Block truncate={true}>
+                    <Text> Total Sentiment</Text>
+                    <Metric truncate={true}>Positive</Metric>
+                  </Block>
+                </Flex>
               </Card>
-            </Flex>
+            </SimpleGrid>
             <LineGraph />
           </Box>
           <Box pt={16}>

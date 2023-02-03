@@ -5,10 +5,10 @@ export const NewsItems = () => {
   return (
     <Box pt={6}>
       <Box pb={6} cursor={"pointer"}>
-        <Text fontWeight={"bold"} fontSize={"sm"}>
+        <Text fontWeight={"medium"} fontSize={"md"}>
           Suspendisse eu vulputate est, ac sodales nunc.
         </Text>
-        <Text pt={1} pb={3} fontSize={"small"}>
+        <Text pt={1} pb={3} fontSize={"sm"} color="#4b5563">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           eu vulputate est, ac sodales nunc.....
         </Text>
@@ -20,10 +20,10 @@ export const NewsItems = () => {
         />
       </Box>
       <Box pb={6} cursor={"pointer"}>
-        <Text fontWeight={"bold"} fontSize={"sm"}>
+        <Text fontWeight={"medium"} fontSize={"md"}>
           Suspendisse eu vulputate est, ac sodales nunc.
         </Text>
-        <Text pt={1} pb={3} fontSize={"small"}>
+        <Text pt={1} pb={3} fontSize={"sm"} color="#4b5563">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           eu vulputate est, ac sodales nunc.....
         </Text>
@@ -35,10 +35,10 @@ export const NewsItems = () => {
         />
       </Box>
       <Box pb={6} cursor={"pointer"}>
-        <Text fontWeight={"bold"} fontSize={"sm"}>
+        <Text fontWeight={"medium"} fontSize={"md"}>
           Suspendisse eu vulputate est, ac sodales nunc.
         </Text>
-        <Text pt={1} pb={3} fontSize={"small"}>
+        <Text pt={1} pb={3} fontSize={"sm"} color="#4b5563">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           eu vulputate est, ac sodales nunc.....
         </Text>
