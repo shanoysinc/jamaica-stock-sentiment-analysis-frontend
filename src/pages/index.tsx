@@ -2,13 +2,50 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
-import Link from "next/link";
-import { Box, Flex, HStack, IconButton, Stack, Text } from "@chakra-ui/react";
-import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { ReactNode } from "react";
+import {
+  Box,
+  Flex,
+  Avatar,
+  HStack,
+  Link,
+  IconButton,
+  Button,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuDivider,
+  useDisclosure,
+  useColorModeValue,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import NextLink from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const Links = ["dashboard", "about"];
+
+const NavLink = ({ children }: { children: any }) => (
+  <Link
+    px={2}
+    py={1}
+    rounded={"md"}
+    _hover={{
+      textDecoration: "none",
+      bg: useColorModeValue("gray.200", "gray.700"),
+    }}
+    href={children}
+    textTransform={"capitalize"}
+  >
+    {children}
+  </Link>
+);
+
 export default function Home() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       <Head>
@@ -35,17 +72,12 @@ export default function Home() {
                 display={{ md: "none" }}
                 onClick={isOpen ? onClose : onOpen}
               />
-              <HStack spacing={8} alignItems={"center"}>
-                <HStack
-                  as={"nav"}
-                  spacing={4}
-                  display={{ base: "none", md: "flex" }}
-                >
-                  {Links.map((link) => (
-                    <NavLink key={link}>{link}</NavLink>
-                  ))}
-                </HStack>
-              </HStack>
+              <Box>
+                {Links.map((link) => (
+                  <NavLink key={link}>{link}</NavLink>
+                ))}
+              </Box>
+              <Button>Visit Dashboard</Button>
             </Flex>
 
             {isOpen ? (
