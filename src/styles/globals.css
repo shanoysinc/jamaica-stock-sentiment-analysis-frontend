@@ -48,15 +48,11 @@
 
 html,
 body {
-  /* max-width: 100vw;
-  overflow-x: hidden; */
-  /* background-color: #000; */
-  /* background-color: red; */
-  color: #334155;
+  color: #f3f4f6;
+  color: red;
 }
-
-html {
-  background-color: #f9fafb;
+body {
+  color: red;
 }
 
 a {
